@@ -18,7 +18,7 @@
                   <div>
             <input type="password" name="password" class="password" placeholder="Password" oncontextmenu="return false" onpaste="return false" />
                   </div>
-                  <button id="submit" type="button">Sign in</button>
+                  <button v-on:click="login()" type="button">Sign in</button>
               </form>
               <div class="connect">
                   <p>If we can only encounter each other rather than stay with each other,then I wish we had never encountered.</p>
@@ -53,45 +53,6 @@
     
 </template>
 <script>
-import './script.js'
-export default {
-  name: 'hello',
-  data () {
-    return {
-      msg: ' App'
-    }
-  },
-  methods: {},
-  mounted () {
-    var count = 0
-    var trunAround = function () {
-      if (count === 3) {
-        count = 0
-      }
-      var param = {
-        '0': true,
-        '1': true,
-        '2': true
-      }
-      param[count.toString()] = false
-      if (param['0']) {
-        // 动画
-        $('.slide-0').animate({'opacity': '0'}, 2500, function () {})
-      }
-      if (param['1']) {
-        // 动画
-        $('.slide-1').animate({'opacity': '0'}, 2500, function () {})
-      }
-      if (param['2']) {
-        // 动画
-        $('.slide-2').animate({'opacity': '0'}, 2500, function () {})
-      }
-      $('.slide-' + (count)).animate({'opacity': '1'}, 2500, function () {
-        count++
-        trunAround()
-      })
-    }
-    trunAround()
-  }
-}
+import script from './script.js'
+export default script
 </script>
