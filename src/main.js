@@ -2,14 +2,21 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+// 引入jquery
 import 'jquery'
+// 引入路由
 import router from './router'
+// http 拦截
 import './filiter/http.js'
-
+// 所有变量
+import CONSTANT from './services/constant.js'
+// 数据接口
 import API from './api/api.js'
 
+// 全局引用API接口
 Vue.prototype.API = API
-
+// 全局引用静态变量
+Vue.prototype.CONSTANT = CONSTANT
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
