@@ -19,9 +19,13 @@ function routerfn () {
   // 判断是否做了前后台分离  如果IS_ADMIN 是否后台 true
   if (!CONSTANT.IS_SEPARATE || CONSTANT.IS_ADMIN) {
     admin = [{
-      path: '/',
+      path: '/hello',
       name: 'Hello',
       component: index['admin']['HelloWorld']
+    }, {
+      path: '/',
+      name: 'Header',
+      component: index['common']['Header']
     }]
     for (var i in admin) {
       router.push(admin[i])
