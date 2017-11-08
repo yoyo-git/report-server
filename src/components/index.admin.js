@@ -1,5 +1,5 @@
-import HelloWorld from './admin/hellow-world/HelloWorld'
+import HelloWorld from './admin/hellow-world/HelloWorld.vue'
 
 export default {
-  'HelloWorld': HelloWorld
+  'hello': HelloWorld
 }

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 // 业务层
-import index from '@/components/index.js'
+import index from '@/components/login.js'
 // 开关
 import CONSTANT from '../services/constant.js'
 
@@ -38,15 +38,9 @@ function routerfn () {
     name: 'login',
     component: index['common']['login']
   }, {
-    path: '/home',
-    component: index['common']['dashboard'],
-    children: [
-      {
-        path: '/',
-        name: 'hello',
-        component: index['admin']['hello']
-      }
-    ]
+    path: '/dashboard',
+    name: 'dashboard',
+    component: index['common']['dashboard']
   }]
   for (var j in common) {
     router.push(common[j])

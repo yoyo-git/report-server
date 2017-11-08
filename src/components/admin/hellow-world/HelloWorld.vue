@@ -1,17 +1,17 @@
 <template>
   <div class="hello">
-    <div class="title" id="ap" v-on:click="handleCommand()">11</div>
-    <div class="title" v-on:click="handleCommand1()">12</div>
+    <el-button @click="visible = true">按钮</el-button>
+    <el-dialog :visible.sync="visible" title="Hello world">
+      <p>欢迎使用 Element</p>
+    </el-dialog>
   </div>
 </template>
 
 <script>
 export default {
   name: 'hello',
-  data () {
-    return {
-      msg: ' App'
-    }
+  data: function () {
+    return { visible: false }
   },
   methods: {
     handleCommand () {

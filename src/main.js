@@ -6,17 +6,16 @@ import App from './App'
 import 'jquery'
 // 引入路由
 import router from './router'
-// 引入饿了么组件
-import ElementUI from 'element-ui'
-// 引入饿了么样式表
-import 'element-ui/lib/theme-chalk/index.css'
 // http 拦截
 import './filiter/http.js'
 // 所有变量
 import CONSTANT from './services/constant.js'
 // 数据接口
 import API from './api/api.js'
-
+// 引入饿了么组件
+import ElementUI from 'element-ui'
+// 引入饿了么样式表
+import 'element-ui/lib/theme-default/index.css'
 Vue.use(ElementUI)
 
 // 全局引用API接口

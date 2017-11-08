@@ -12,8 +12,9 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
-    "element-ui": "^1.4.9",
+    "element-ui": "^2.0.0",
     "jquery": "^3.2.1",
+    "layui-src": "^2.1.7",
     "node-sass": "^4.6.0",
     "sass-loader": "^6.0.6",
     "vue": "^2.5.2",
