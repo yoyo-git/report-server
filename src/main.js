@@ -9,7 +9,6 @@ import store from './store';
 import 'jquery';
 // js库
 import './libs/index.js';
-import Element from 'element-ui';
 // 引入路由
 import router from './router';
 // http 拦截
@@ -17,13 +16,18 @@ import './filiter/http.js';
 // 所有变量
 import CONSTANT from './services/constant.js';
 // 数据接口
-import API from './api/api.js';
+
+// 引入饿了么组件
+import ElementUI from 'element-ui'
+// 引入饿了么样式表
+import 'element-ui/lib/theme-default/index.css'
+Vue.use(ElementUI)
 // js库
 import layer from './libs/layer/layer-2.4.js';
 import Cookies from 'js-cookie';
 /* eslint-disable no-new */
-Vue.use(Element)
 // 全局引用API接口
+import API from './api/api.js';
 Vue.prototype.API = API
 // 全局引用静态变量
 Vue.prototype.CONSTANT = CONSTANT

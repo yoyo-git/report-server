@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 // 业务层
-import index from '@/components/index.js'
+import index from '@/components/login.js'
 // 开关
 import CONSTANT from '../services/constant.js'
 
@@ -18,34 +18,19 @@ function routerfn () {
   var common = []
   // 判断是否做了前后台分离  如果IS_ADMIN 是否后台 true
   if (!CONSTANT.IS_SEPARATE || CONSTANT.IS_ADMIN) {
-   admin = [{
-      path: '/hello',
-      name: 'Hello',
-      component: index['admin']['HelloWorld'],
-      children: [
-        {
-           path: 'hello',
-  				 component: index['admin']['hello']
-        }
-      ]
-    }]
+    admin = []
     for (var i in admin) {
       router.push(admin[i])
     }
   }
   // 判断是否做了前后台分离  如果IS_ADMIN 是否后台 true
   if (!CONSTANT.IS_SEPARATE || !CONSTANT.IS_ADMIN) {
-    custom = [{
-    path: '/loginTest',
-    name: 'Login',
-    component: index['custom']['Login']
-  }]
+    custom = []
     for (var _i in custom) {
       router.push(custom[_i])
     }
   }
-   common = [{
-
+  common = [{
     path: '/',
     redirect: '/login',
   }, {
@@ -53,18 +38,9 @@ function routerfn () {
     name: 'login',
     component: index['common']['login']
   }, {
-    path: '/home',
-    component: index['common']['dashboard'],
-    children: [
-      {
-        path: '/',
-        name: 'hello',
-        component: index['admin']['hello']
-      }
-    ]}, {
-    path: '/not-found',
-    name: 'not-found',
-    component: index['common']['not-found']
+    path: '/dashboard',
+    name: 'dashboard',
+    component: index['common']['dashboard']
   }]
   for (var j in common) {
     router.push(common[j])
@@ -73,6 +49,6 @@ function routerfn () {
 routerfn()
 
 export default new Router({
-  mode: 'history',
-  routes: router
+  routes: router,
+  mode: 'history'
 })

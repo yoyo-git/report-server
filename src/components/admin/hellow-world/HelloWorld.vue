@@ -10,10 +10,8 @@
 <script>
 export default {
   name: 'hello',
-  data () {
-    return {
-      msg: ' App'
-    }
+  data: function () {
+    return { visible: false }
   },
   methods: {
     handleCommand () {

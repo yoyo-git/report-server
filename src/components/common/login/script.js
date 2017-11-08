@@ -7,7 +7,7 @@ export default {
   },
   methods: {
     login () {
-    	layer.msg('请输入正确的数据', {shift:6,icon: 5})
+    layer.msg('请输入正确的数据', {shift:6,icon: 5})
       var u = $('input[name=username]')
       var p = $('input[name=password]')
       if (u.val() === '' || p.val() === '') {
