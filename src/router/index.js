@@ -18,19 +18,34 @@ function routerfn () {
   var common = []
   // 判断是否做了前后台分离  如果IS_ADMIN 是否后台 true
   if (!CONSTANT.IS_SEPARATE || CONSTANT.IS_ADMIN) {
-    admin = []
+   admin = [{
+      path: '/hello',
+      name: 'Hello',
+      component: index['admin']['HelloWorld'],
+      children: [
+        {
+           path: 'hello',
+  				 component: index['admin']['hello']
+        }
+      ]
+    }]
     for (var i in admin) {
       router.push(admin[i])
     }
   }
   // 判断是否做了前后台分离  如果IS_ADMIN 是否后台 true
   if (!CONSTANT.IS_SEPARATE || !CONSTANT.IS_ADMIN) {
-    custom = []
+    custom = [{
+    path: '/loginTest',
+    name: 'Login',
+    component: index['custom']['Login']
+  }]
     for (var _i in custom) {
       router.push(custom[_i])
     }
   }
-  common = [{
+   common = [{
+
     path: '/',
     redirect: '/login',
   }, {
@@ -46,7 +61,10 @@ function routerfn () {
         name: 'hello',
         component: index['admin']['hello']
       }
-    ]
+    ]}, {
+    path: '/not-found',
+    name: 'not-found',
+    component: index['common']['not-found']
   }]
   for (var j in common) {
     router.push(common[j])
@@ -55,6 +73,6 @@ function routerfn () {
 routerfn()
 
 export default new Router({
-  routes: router,
-  mode: 'history'
+  mode: 'history',
+  routes: router
 })

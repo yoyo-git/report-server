@@ -7,34 +7,23 @@ export default {
   },
   methods: {
     login () {
-      var self = this
+    layer.msg('请输入正确的数据', {shift:6,icon: 5})
       var u = $('input[name=username]')
       var p = $('input[name=password]')
       if (u.val() === '' || p.val() === '') {
         $('#ts').html('用户名或密码不能为空~')
-        self.isShow()
         return false
       } else {
         var reg = /^[0-9A-Za-z]+$/
         if (!reg.exec(u.val())) {
           $('#ts').html('用户名错误')
-          self.isShow()
           return false
         }
-        self.$router.push('/home')
       }
-    },
-    // 是否显示
-    isShow () {
-      $('.alert').show().animate({
-        'top': '45%'
-      }, 300)
-    },
-    // 是否隐藏
-    isHide () {
-      $('.alert').animate({
-        'top': '-40%'
-      }, 300)
+      this.API.getUserJobList({})
+      .then(function (res) {
+        console.log(res)
+      })
     }
   },
   mounted () {
@@ -45,7 +34,6 @@ export default {
     $('.connect p').eq(1).animate({
       'left': '0%'
     }, 400)
-    var self = this
     // 计数
     var count = 0
     // 循环动画
@@ -77,8 +65,5 @@ export default {
       })
     }
     trunAround()
-    $('.btn').click(function () {
-      self.isHide()
-    })
   }
 }

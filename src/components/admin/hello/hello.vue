@@ -1,17 +1,18 @@
 <template>
-  <div class="hello">
-    <div class="title" id="ap" v-on:click="handleCommand()">11</div>
-    <div class="title" v-on:click="handleCommand1()">12</div>
+  <div class="hellovue">
+    <div class="title" id="ap" v-on:click="handleCommand()">111</div>
+    <div class="title" v-on:click="handleCommand1()">122</div>
     <i class="icon iconfont icon-guanbi"></i>
-    <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'hello',
-  data: function () {
-    return { visible: false }
+  name: 'hellovue',
+  data () {
+    return {
+      msg: ' App'
+    }
   },
   methods: {
     handleCommand () {
