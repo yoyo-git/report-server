@@ -13,10 +13,10 @@ body {
     /*font-family: 'PT Sans', Helvetica, Arial, sans-serif;*/
 	font-family:"Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu;
     text-align: center;
-    color: #fff;
 }
 
 .page-container {
+	color: #fff;
     margin: 120px auto 0 auto;
 }
 
