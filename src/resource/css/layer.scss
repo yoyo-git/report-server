@@ -1,0 +1,113 @@
+// layer弹层
+@import "../../libs/layer/skin/default/layer.css";
+
+.layui-layer-dialog {
+    .layui-layer-content{
+        word-break: break-word;
+    }
+}
+
+// layer弹层皮肤  - 自定义layer-skin-lt
+.layer-skin-lt{
+    border-radius:5px;
+    
+    .layui-layer-btn{
+        text-align:center;
+    }
+}
+.layui-layer-moves{
+    position:fixed;
+}
+
+
+// dw前端layer弹窗
+.skin-dw-custom{
+     border-radius:5px;
+    overflow:hidden;
+    .layui-layer-title{
+        position: relative;
+        display:inline-block;
+        margin-left:20px;
+        padding-right:55px;
+        padding-left:0;
+        padding-top:12px;
+        color:#007DDB;
+        font-size:20px;
+        font-weight: bold;
+        border-bottom:none;
+         box-sizing:content-box;
+        background:none;
+        border-bottom:3px solid blue;
+    }
+    
+    .layui-layer-setwin{
+        a{
+            width:20px;
+            height:20px;
+            background:url(../images/icon-close.png) no-repeat;
+        }
+    }
+    .layui-layer-btn{
+        display:none;
+    }
+}
+
+// layer 官网弹窗内容
+.m-layer-content{
+    position:relative;
+    width:360px;
+    margin-top:20px;
+    margin-bottom:20px;
+    min-height:200px;
+    max-height:360px;
+    //height:480px;
+    padding:0 20px;
+    color:blue;
+    
+    overflow: hidden;
+
+    /* Prevent native touch events on Windows */
+    -ms-touch-action: none;
+
+    /* Prevent the callout on tap-hold and text selection */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    /* Prevent text resize on orientation change, useful for web-apps */
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+    
+    &.content-landscape {
+        width:100%;
+        min-height:240px;
+    }
+    
+    .m-layer-scroll{ 
+        /* Prevent elements to be highlighted on tap */
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+    
+        /* Put the scroller into the HW Compositing layer right from the start */
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
+        
+        .text-content{
+            font-size:16px;
+            
+            p{
+                margin-bottom:.6em;
+                line-height:1.4em;
+            }
+        }
+        
+    }
+}
+

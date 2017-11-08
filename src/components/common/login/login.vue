@@ -24,14 +24,7 @@
                   <p>If we can only encounter each other rather than stay with each other,then I wish we had never encountered.</p>
           <p style="margin-top:20px;">如果只是遇见，不能停留，不如不遇见。</p>
               </div>
-          </div>
-      <div class="alert" style="display:none">
-        <h2>消息</h2>
-        <div class="alert_con">
-          <p id="ts"></p>
-          <p style="line-height:70px"><a class="btn">确定</a></p>
-        </div>
-      </div>
+         </div>
       <ul class="speed">
         <li class="slide slide-0">
           <a target="_blank">

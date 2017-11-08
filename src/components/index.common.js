@@ -1,5 +1,7 @@
-import index from './common/index/index'
+import login from './common/login/login'
+import not_found from './common/not-found/not-found'
 
 export default {
-  'index': index
+  'login': login,
+  'not-found': not_found
 }
